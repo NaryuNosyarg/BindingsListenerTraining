@@ -29,8 +29,8 @@ public class EventsTraining {
 	 * Jedes mal wenn:
 	 * </p>
 	 * <ul>
-	 * <li>aus cityList ein Element entfernt wird, soll <code>result.equals("remove")== true</code> gelten</li>
-	 * <li>in cityList ein Element hinzugefuegt wird soll <code>result.equals("add") == true</code> gelten</li>
+	 * <li>aus cityNames ein Element entfernt wird, soll <code>result.equals("remove")== true</code> gelten</li>
+	 * <li>in cityNames ein Element hinzugefuegt wird soll <code>result.equals("add") == true</code> gelten</li>
 	 * </ul>
 	 */
 	private void initListListener() {
