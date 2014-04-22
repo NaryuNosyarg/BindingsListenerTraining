@@ -114,7 +114,7 @@ public class BindingsTrainingTest {
 
 		// NULL
 		bindings.color.set(null);
-		assertEquals("FFFFFF", bindings.colorString.get());
+		assertEquals("0x000000ff", bindings.colorString.get());
 		bindings.colorString.set(null);
 		assertNull(bindings.color.get());
 
