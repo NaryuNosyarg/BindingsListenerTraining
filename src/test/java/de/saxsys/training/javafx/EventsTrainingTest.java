@@ -9,7 +9,9 @@ public class EventsTrainingTest {
 	private EventsTraining eventsTraining = new EventsTraining();
 
 	/**
-	 * #Ü1
+	 * Uebung 1
+	 * 
+	 * Implementieren Sie {@link EventsTraining#initPythagorasListener()}
 	 */
 	@Test
 	public void pythagorasTest() {
@@ -19,7 +21,9 @@ public class EventsTrainingTest {
 	}
 
 	/**
-	 * #Ü2
+	 * Uebung 2
+	 * 
+	 * Implementieren Sie {@link EventsTraining#initListListener()}
 	 */
 	@Test
 	public void listTest() {
@@ -29,14 +33,19 @@ public class EventsTrainingTest {
 		assertEquals("remove", eventsTraining.result);
 	}
 
+	/**
+	 * Uebung 3
+	 * 
+	 * Implementieren Sie {@link EventsTraining#initBatmanListener()}
+	 */
 	@Test
 	public void batmanTest() {
 		eventsTraining.bindings.firstName.set("John");
 		eventsTraining.bindings.lastName.set("Snow");
 		assertEquals("I want to be batman.", eventsTraining.result);
-		eventsTraining.bindings.firstName.set("Bruce");
-		assertEquals("I want to be batman.", eventsTraining.result);
 		eventsTraining.bindings.lastName.set("Wayne");
+		assertEquals("I want to be batman.", eventsTraining.result);
+		eventsTraining.bindings.firstName.set("Bruce");
 		assertEquals("I am batman.", eventsTraining.result);
 	}
 
