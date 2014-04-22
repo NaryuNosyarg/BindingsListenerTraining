@@ -134,8 +134,8 @@ public class BindingsTraining {
 	 * Uebung 7
 	 * 
 	 * <ul>
-	 * <li>1. Binde illegalBindingA an illegalBindingB</li>
-	 * <li>2. Setze auf illegalBindingA einen neuen Wert.</li>
+	 * <li>1. Binden Sie illegalBindingA an illegalBindingB</li>
+	 * <li>2. Setzen Sie illegalBindingA auf einen neuen Wert.</li>
 	 * </ul>
 	 */
 	protected void createNonValidBinding() {
