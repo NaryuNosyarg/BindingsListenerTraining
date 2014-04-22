@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package de.saxsys.training.javafx;
 
 import javafx.beans.property.BooleanProperty;
@@ -48,13 +44,10 @@ public class BindingsTraining {
 					"Berlin", "Dortmund", "Duesseldorf", "Hannover", "Mainz"));
 	protected FilteredList<String> filteredList;
 	// Uebung 6
-	protected DoubleProperty x = new SimpleDoubleProperty();
-	protected DoubleProperty y = new SimpleDoubleProperty();
-	// Ü7
 	protected ObjectProperty<Color> color = new SimpleObjectProperty<>(
 			Color.BLACK);
 	protected StringProperty colorString = new SimpleStringProperty();
-	// Ü8
+	// Uebung 7
 	protected IntegerProperty illegalBindingA = new SimpleIntegerProperty();
 	protected IntegerProperty illegalBindingB = new SimpleIntegerProperty();
 
@@ -64,15 +57,15 @@ public class BindingsTraining {
 		createNameBinding();
 		createListBinding();
 		createFilteredListBinding();
-		createTresholdBinding();
 		createColorBinding();
 	}
 
 	/**
-	 * #Ü1
+	 * Uebung 1
+	 * 
 	 * <ul>
-	 * <li>1. aGreaterB soll ausdrücken, dass a größer b ist. wow ;-)</li>
-	 * <li>2. notAGreaterB soll ausdrücken, dass a nicht größer b ist.
+	 * <li>1. aGreaterB soll ausdruecken, dass a groesser b ist. Wow! ;-)</li>
+	 * <li>2. notAGreaterB soll ausdruecken, dass a nicht groesser b ist.
 	 * (Negierung von aGreaterB)</li>
 	 * </ul>
 	 */
@@ -80,80 +73,69 @@ public class BindingsTraining {
 	}
 
 	/**
-	 * #Ü2: Implementierung des Satzes des Pythagoras c^2 = a^2 + b^2
+	 * Uebung 2: Implementierung des Satzes des Pythagoras c^2 = a^2 + b^2
 	 * 
-	 * <ul>
-	 * <li>1. c soll gebunden werden, sodass es immer den aktuellen Wert der
-	 * berechnung hat</li>
-	 * <li>2. berechnen Sie zuerst cSquare (helper - IntegerProperty) -> a^2+b^2
-	 * </li>
-	 * <li>3. damit c den richtigen Wert darstellt, muss noch die Wurzel aus
+	 * <ol>
+	 * <li>Berechnen Sie zuerst cSquare (DoubleProperty) -> a^2+b^2</li>
+	 * <li>Damit c den richtigen Wert darstellt, muss noch die Wurzel aus
 	 * cSquare gezogen werden - entwickeln Sie dazu ein LowLevel Binding ->
 	 * Folie</li>
-	 * </ul>
+	 * </ol>
 	 */
 	private void createPythagorasBinding() {
 	}
 
 	/**
-	 * #Ü3
+	 * Uebung 3
+	 * 
 	 * <p>
-	 * Binde fullName so dass es eine Konkatenation aus firstName und lastName
-	 * ist.
+	 * Binden Sie fullName so, dass es eine Konkatenation aus firstName und
+	 * lastName ist.
 	 * </p>
 	 */
 	private void createNameBinding() {
 	}
 
 	/**
-	 * #Ü4
-	 * <ul>
-	 * <li>1. anotherVariableList soll den gleichen Inhalt haben wie
-	 * variablesList</li>
-	 * <li>2. variablesList soll den gleichen Inhalt haben wie
-	 * anotherVariableList</li>
-	 * </ul>
+	 * Uebung 4
+	 * 
+	 * <ol>
+	 * <li>anotherVariableList soll den gleichen Inhalt haben wie variablesList</li>
+	 * <li>variablesList soll den gleichen Inhalt haben wie anotherVariableList</li>
+	 * </ol>
 	 */
 	private void createListBinding() {
 	}
 
 	/**
-	 * #Ü5
+	 * Uebung 5
+	 * 
 	 * <p>
-	 * Binde firstStringInList, so dass es immer den ersten Wert der Liste
-	 * stringList hat. (Hinweise: Bindings.class)
+	 * Die Variable <i>filteredList</i> soll alle Staedte (cityNames) enthalten, die mit einem "D" beginnen.
 	 * </p>
 	 */
 	private void createFilteredListBinding() {
 	}
 
 	/**
-	 * #Ü6
+	 * Uebung 6
 	 * 
-	 * <p>
-	 * Binde y, so dass es sich verhält, wie am Beamer zu sehen ist.
-	 * </p>
-	 */
-	private void createTresholdBinding() {
-	}
-
-	/**
-	 * #Ü7
 	 * <ul>
 	 * <li>colorString soll bidirektional an color gebunden werden.</li>
-	 * <li>Ändert sich der String, soll sich die Color anpassen.</li>
-	 * <li>Ändert sich die Color soll sich der String anpassen.</li>
-	 * <li>Verwenden Sie einen StringConverter -> Folie [Ü8]</li>
+	 * <li>Aendert sich der String, soll sich die Color anpassen.</li>
+	 * <li>Aendert sich die Color, soll sich der String anpassen.</li>
+	 * <li>Verwenden Sie einen StringConverter -> Folie [Uebung 6]</li>
 	 * </ul>
 	 */
 	private void createColorBinding() {
 	}
 
 	/**
-	 * #Ü8
+	 * Uebung 7
+	 * 
 	 * <ul>
 	 * <li>1. Binde illegalBindingA an illegalBindingB</li>
-	 * <li>2. Setze auf illegalBindingA einen Wert mit dem setter.</li>
+	 * <li>2. Setze auf illegalBindingA einen neuen Wert.</li>
 	 * </ul>
 	 */
 	protected void createNonValidBinding() {

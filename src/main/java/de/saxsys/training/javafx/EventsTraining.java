@@ -1,52 +1,54 @@
 package de.saxsys.training.javafx;
 
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.collections.ListChangeListener;
-import javafx.scene.paint.Color;
-
 public class EventsTraining {
 
-    protected BindingsTraining bindings = new BindingsTraining();
-    protected String value = null;
+	protected BindingsTraining bindings = new BindingsTraining();
+	protected String result = null;
 
-    public EventsTraining() {
-        initPythagorasListener();
-        initListListener();
-        initColorObjectListener();
-    }
+	public EventsTraining() {
+		initPythagorasListener();
+		initListListener();
+		initBatmanListener();
+	}
 
-    /**
-     * #Ü1
-     * 
-     * <p>Jedes mal wenn c geändert wird, soll value.equals("Hypothenuse:
-     * ${NEUERWERTVONC}") == true gelten</p>
-     */
-    private void initPythagorasListener() {
-      
-    }
+	/**
+	 * Uebung 1
+	 * 
+	 * <p>
+	 * Jedes mal wenn c geaendert wird, soll <code>result.equals("Hypothenuse: ${NEUERWERTVONC}") == true</code> gelten
+	 * </p>
+	 */
+	private void initPythagorasListener() {
 
-    /**
-     * #Ü2 
-     * 
-     * <p>Jedes mal wenn:</p>
-     * <ul>
-     *  <li>aus stringList ein Element entfernt wird, soll value.equals("remove") == true gelten</li>
-     *  <li>in stringList ein Element hinzugefügt wird soll value.equals("add") == true gelten</li>
-     * </ul>
-     */
-    private void initListListener() {
-      
-    }
+	}
 
-    /**
-     * #Ü3
-     * 
-     * <p>Jedes mal wenn sich die color ändert soll value.equals("The Hex value of the color
-     * is: ${HEXOFCOLOR}") == true gelten</p>
-     */
-    private void initColorObjectListener() {
-      
-    }
-} 
-   
+	/**
+	 * Uebung 2
+	 * 
+	 * <p>
+	 * Jedes mal wenn:
+	 * </p>
+	 * <ul>
+	 * <li>aus cityList ein Element entfernt wird, soll <code>result.equals("remove")== true</code> gelten</li>
+	 * <li>in cityList ein Element hinzugefuegt wird soll <code>result.equals("add") == true</code> gelten</li>
+	 * </ul>
+	 */
+	private void initListListener() {
+
+	}
+
+	/**
+	 * Uebung 3
+	 * 
+	 * <p>
+	 * Wenn der komplette Name "Bruce Wayne" lautet, dann soll
+	 * <code>result.equals("I am batman.") == true</code> gelten. In allen
+	 * anderen Faellen soll
+	 * <code>result.equals("I want to be batman.") == true</code> gelten.
+	 * </p>
+	 */
+	private void initBatmanListener() {
+
+	}
+
+}

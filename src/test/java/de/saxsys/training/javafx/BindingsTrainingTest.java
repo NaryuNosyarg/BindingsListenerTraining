@@ -22,8 +22,9 @@ public class BindingsTrainingTest {
 	BindingsTraining bindings = new BindingsTraining();
 
 	/**
-	 * #Ü1 Implementieren Sie {@link BindingsTraining#createAGreaterBBinding()}
-	 * .
+	 * Uebung 1 
+	 * 
+	 * Implementieren Sie {@link BindingsTraining#createAGreaterBBinding()}
 	 */
 	@Test
 	public void aGreaterBTest() {
@@ -35,8 +36,9 @@ public class BindingsTrainingTest {
 	}
 
 	/**
-	 * #Ü2 Implementieren Sie
-	 * {@link BindingsTraining#createPythagorasBinding()} .
+	 * Uebung 2
+	 * 
+	 * Implementieren Sie {@link BindingsTraining#createPythagorasBinding()} .
 	 */
 	@Test
 	public void pythagorasTest() {
@@ -46,7 +48,9 @@ public class BindingsTrainingTest {
 	}
 
 	/**
-	 * #Ü3 Implementieren Sie {@link BindingsTraining#createNameBinding()}.
+	 * Uebung 3
+	 * 
+	 * Implementieren Sie {@link BindingsTraining#createNameBinding()}.
 	 */
 	@Test
 	public void nameTest() {
@@ -56,7 +60,9 @@ public class BindingsTrainingTest {
 	}
 
 	/**
-	 * #Ü4 Implementieren Sie {@link BindingsTraining#createListBinding()}.
+	 * Uebung 4
+	 * 
+	 * Implementieren Sie {@link BindingsTraining#createListBinding()}.
 	 */
 	@Test
 	public void listTest() {
@@ -69,6 +75,11 @@ public class BindingsTrainingTest {
 				.size() + 1));
 	}
 
+	/**
+	 * Uebung 5
+	 * 
+	 * Implementieren Sie {@link BindingsTraining#createFilteredListBinding()}.
+	 */
 	@Test
 	public void filteredListTest() {
 		assertTrue(bindings.filteredList != null);
@@ -80,25 +91,9 @@ public class BindingsTrainingTest {
 	}
 
 	/**
-	 * #Ü6 Implementieren Sie {@link BindingsTraining#createTresholdBinding()}.
-	 */
-	@Test
-	public void tresholdTest() {
-		bindings.x.set(0.0);
-		assertEquals(0, bindings.y.get(), 0.1);
-
-		bindings.x.set(1.0);
-		assertEquals(1.0, bindings.y.get(), 0.1);
-
-		bindings.x.set(0.5);
-		assertEquals(1.0, bindings.y.get(), 0.1);
-
-		bindings.x.set(0.25);
-		assertEquals(0.5, bindings.y.get(), 0.1);
-	}
-
-	/**
-	 * #Ü7 Implementieren Sie {@link BindingsTraining#createColorBinding()}.
+	 * Uebung 6
+	 * 
+	 * Implementieren Sie {@link BindingsTraining#createColorBinding()}.
 	 */
 	@Test
 	public void colorTest() {
@@ -126,7 +121,9 @@ public class BindingsTrainingTest {
 	}
 
 	/**
-	 * #Ü8 Implementieren Sie {@link BindingsTraining#createNonValidBinding()}.
+	 * Uebung 7
+	 * 
+	 * Implementieren Sie {@link BindingsTraining#createNonValidBinding()}.
 	 */
 	@Test(expected = RuntimeException.class)
 	public void nonValidBindingTest() {
