@@ -15,8 +15,8 @@ public class EventsTrainingTest {
 	 */
 	@Test
 	public void pythagorasTest() {
-		eventsTraining.bindings.a.set(3);
-		eventsTraining.bindings.b.set(4);
+		eventsTraining.bindingsTraining.a.set(3);
+		eventsTraining.bindingsTraining.b.set(4);
 		assertEquals("Hypothenuse: 5", eventsTraining.result);
 	}
 
@@ -27,9 +27,9 @@ public class EventsTrainingTest {
 	 */
 	@Test
 	public void listTest() {
-		eventsTraining.bindings.cityNames.add("Darmstadt");
+		eventsTraining.bindingsTraining.cityNames.add("Darmstadt");
 		assertEquals("add", eventsTraining.result);
-		eventsTraining.bindings.cityNames.remove(0);
+		eventsTraining.bindingsTraining.cityNames.remove(0);
 		assertEquals("remove", eventsTraining.result);
 	}
 
@@ -40,12 +40,12 @@ public class EventsTrainingTest {
 	 */
 	@Test
 	public void batmanTest() {
-		eventsTraining.bindings.firstName.set("John");
-		eventsTraining.bindings.lastName.set("Snow");
+		eventsTraining.bindingsTraining.firstName.set("John");
+		eventsTraining.bindingsTraining.lastName.set("Snow");
 		assertEquals("I want to be batman.", eventsTraining.result);
-		eventsTraining.bindings.lastName.set("Wayne");
+		eventsTraining.bindingsTraining.lastName.set("Wayne");
 		assertEquals("I want to be batman.", eventsTraining.result);
-		eventsTraining.bindings.firstName.set("Bruce");
+		eventsTraining.bindingsTraining.firstName.set("Bruce");
 		assertEquals("I am batman.", eventsTraining.result);
 	}
 

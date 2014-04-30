@@ -1,15 +1,23 @@
 package de.saxsys.training.javafx;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+
 public class EventsTraining {
 
-	protected BindingsTraining bindings = new BindingsTraining();
-	protected String result = null;
+    public StringProperty result = new SimpleStringProperty();
+    public BindingsTraining bindingsTraining;
 
-	public EventsTraining() {
-		initPythagorasListener();
-		initListListener();
-		initBatmanListener();
-	}
+    public EventsTraining() {
+        this(new BindingsTraining());
+    }
+
+    public EventsTraining(BindingsTraining bindingsTraining) {
+        this.bindingsTraining = bindingsTraining;
+        initPythagorasListener();
+        initListListener();
+        initBatmanListener();
+    }
 
 	/**
 	 * Uebung 1
