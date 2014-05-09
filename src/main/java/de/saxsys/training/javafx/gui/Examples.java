@@ -12,9 +12,13 @@ import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+import javafx.scene.control.Slider;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.util.converter.NumberStringConverter;
 
 public class Examples extends Application {
 
@@ -45,7 +49,7 @@ public class Examples extends Application {
 
     private Node initResultDisplay() {
         Label resultLabel = new Label();
-        resultLabel.textProperty().bind(new EventsTraining(bindingsTraining).result);
+        resultLabel.textProperty().bind(Bindings.concat("result: ", new EventsTraining(bindingsTraining).result));
         resultLabel.setStyle("-fx-font-size: 18px");
 
         return resultLabel;
@@ -59,16 +63,40 @@ public class Examples extends Application {
         HBox container = new HBox();
         container.setSpacing(20.0);
 
-        // TODO: implement
+        VBox aSliderContainer = new VBox();
+        Slider aSlider = new Slider(0, 10, 1);
+        aSlider.valueProperty().bindBidirectional(bindingsTraining.a);
+        Label aLabel = new Label("a");
+        aSliderContainer.getChildren().addAll(aSlider, aLabel);
+
+        VBox bSliderContainer = new VBox();
+        Slider bSlider = new Slider(0, 10, 1);
+        bSlider.setBlockIncrement(1.0);
+        bSlider.valueProperty().bindBidirectional(bindingsTraining.b);
+        Label bLabel = new Label("b");
+        bSliderContainer.getChildren().addAll(bSlider, bLabel);
+
+        Label label = new Label();
+        label.textProperty().bind(Bindings.concat("a greater b? ", bindingsTraining.aGreaterB.asString()));
+
+        Label heading = new Label("Uebung 1: ");
+
+        container.getChildren().addAll(heading, aSliderContainer, bSliderContainer, label);
 
         return container;
     }
 
     private Node initPythagorasBinding() {
+        HBox container = new HBox();
+        container.setSpacing(20.0);
+
         Label label = new Label();
         label.textProperty().bind(Bindings.concat("Hypothenuse: ", bindingsTraining.c.asString()));
 
-        return label;
+        Label heading = new Label("Uebung 2: ");
+
+        container.getChildren().addAll(heading, label);
+        return container;
     }
 
     /**
@@ -80,7 +108,17 @@ public class Examples extends Application {
         HBox container = new HBox();
         container.setSpacing(20.0);
 
-        // TODO: implement
+        Label firstNameLabel = new Label("First Name: ");
+        TextField firstName = new TextField();
+        firstName.textProperty().bindBidirectional(bindingsTraining.firstName);
+
+        Label lastNameLabel = new Label("Last Name: ");
+        TextField lastName = new TextField();
+        lastName.textProperty().bindBidirectional(bindingsTraining.lastName);
+
+        Label heading = new Label("Uebung 3: ");
+
+        container.getChildren().addAll(heading, firstNameLabel, firstName, lastNameLabel, lastName);
 
         return container;
     }
@@ -94,8 +132,17 @@ public class Examples extends Application {
         HBox container = new HBox();
         container.setSpacing(20.0);
 
-        // TODO: implement
+        ListView<String> cityList = new ListView<>(bindingsTraining.cityNames);
         // Initial sollen keine Staedte gefiltert werden
+        ListView<String> filterCityList = new ListView<>(bindingsTraining.cityNames);
+
+        TextField filterName = new TextField();
+        filterName.textProperty().addListener((bean, oldVal, newVal) ->
+                filterCityList.setItems(bindingsTraining.cityNames.filtered(city -> city.startsWith(newVal))));
+
+        Label heading = new Label("Uebung 5: ");
+
+        container.getChildren().addAll(heading, filterName, cityList, filterCityList);
 
         return container;
     }

@@ -67,8 +67,7 @@ public class BindingsTraining {
      * <ol>
      * <li>Berechnen Sie zuerst cSquare (DoubleProperty) -> a^2+b^2</li>
      * <li>Damit c den richtigen Wert darstellt, muss noch die Wurzel aus
-     * cSquare gezogen werden - entwickeln Sie dazu ein LowLevel Binding ->
-     * Folie</li>
+     * cSquare gezogen werden - entwickeln Sie dazu ein LowLevel Binding</li>
      * </ol>
      */
     private void createPythagorasBinding() {
@@ -89,8 +88,8 @@ public class BindingsTraining {
      * Uebung 4
      * <p/>
      * <ol>
-     * <li>anotherVariableList soll den gleichen Inhalt haben wie variablesList</li>
-     * <li>variablesList soll den gleichen Inhalt haben wie anotherVariableList</li>
+     * <li>anotherVariableList soll den gleichen Inhalt haben wie variablesList; es soll aber erlaubt sein,
+     * Elemente in anotherVariableList hinzuzufuegen, die <strong>nicht</strong> in variablesList landen</li>
      * </ol>
      */
     private void createListBinding() {

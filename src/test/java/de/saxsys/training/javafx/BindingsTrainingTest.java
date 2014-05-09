@@ -1,29 +1,22 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package de.saxsys.training.javafx;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.scene.paint.Color;
-
 import org.junit.Test;
 
+import static org.junit.Assert.*;
+
 /**
- * 
  * @author alexander.casall
  */
 public class BindingsTrainingTest {
 
-	BindingsTraining bindings = new BindingsTraining();
+	private BindingsTraining bindings = new BindingsTraining();
 
 	/**
-	 * Uebung 1 
-	 * 
+	 * Uebung 1
+     * <p/>
 	 * Implementieren Sie {@link BindingsTraining#createAGreaterBBinding()}
 	 */
 	@Test
@@ -37,7 +30,7 @@ public class BindingsTrainingTest {
 
 	/**
 	 * Uebung 2
-	 * 
+     * <p/>
 	 * Implementieren Sie {@link BindingsTraining#createPythagorasBinding()} .
 	 */
 	@Test
@@ -49,7 +42,7 @@ public class BindingsTrainingTest {
 
 	/**
 	 * Uebung 3
-	 * 
+     * <p/>
 	 * Implementieren Sie {@link BindingsTraining#createNameBinding()}.
 	 */
 	@Test
@@ -61,23 +54,25 @@ public class BindingsTrainingTest {
 
 	/**
 	 * Uebung 4
-	 * 
+     * <p/>
 	 * Implementieren Sie {@link BindingsTraining#createListBinding()}.
 	 */
 	@Test
 	public void listTest() {
-		bindings.variablesList.bindContent(bindings.anotherVariableList);
-		assertEquals(bindings.variablesList, bindings.variablesList);
+		assertEquals(bindings.variablesList, bindings.anotherVariableList);
 		DoubleProperty z = new SimpleDoubleProperty(0.5);
-		bindings.variablesList.add(z);
-		bindings.anotherVariableList.add(z);
-		assertTrue(bindings.variablesList.size() == (bindings.anotherVariableList
-				.size() + 1));
+        bindings.variablesList.add(0, z);
+        assertEquals(bindings.variablesList.size(), bindings.anotherVariableList.size());
+        z.set(0.7);
+        assertEquals(bindings.variablesList, bindings.anotherVariableList);
+
+        bindings.anotherVariableList.add(new SimpleDoubleProperty(0.4));
+        assertNotEquals(bindings.variablesList, bindings.anotherVariableList);
 	}
 
 	/**
 	 * Uebung 5
-	 * 
+     * <p/>
 	 * Implementieren Sie {@link BindingsTraining#createFilteredListBinding()}.
 	 */
 	@Test
@@ -92,7 +87,7 @@ public class BindingsTrainingTest {
 
 	/**
 	 * Uebung 6
-	 * 
+     * <p/>
 	 * Implementieren Sie {@link BindingsTraining#createColorBinding()}.
 	 */
 	@Test
@@ -122,7 +117,7 @@ public class BindingsTrainingTest {
 
 	/**
 	 * Uebung 7
-	 * 
+     * <p/>
 	 * Implementieren Sie {@link BindingsTraining#createNonValidBinding()}.
 	 */
 	@Test(expected = RuntimeException.class)
