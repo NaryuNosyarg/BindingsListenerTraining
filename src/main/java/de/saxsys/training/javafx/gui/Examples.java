@@ -1,9 +1,9 @@
-package de.saxsys.training.javafx.gui;
-
-/**
+package de.saxsys.training.javafx.gui;/**
  * Created by michael.thiele on 29.04.2014.
  */
 
+import de.saxsys.training.javafx.BindingsTraining;
+import de.saxsys.training.javafx.EventsTraining;
 import javafx.application.Application;
 import javafx.beans.binding.Bindings;
 import javafx.geometry.Insets;
@@ -16,8 +16,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import de.saxsys.training.javafx.BindingsTraining;
-import de.saxsys.training.javafx.EventsTraining;
+import javafx.util.converter.NumberStringConverter;
 
 public class Examples extends Application {
 
@@ -54,10 +53,6 @@ public class Examples extends Application {
         return resultLabel;
     }
 
-    /**
-     * 2 Slider sollen nebeneinander angeordnet werden und die Werte fuer "a" und "b" setzen. Rechts daneben soll ein
-     * Label anzeigen, ob "a" groesser "b" ist.
-     */
     private Node initAGreaterBBinding() {
         HBox container = new HBox();
         container.setSpacing(20.0);
@@ -98,11 +93,6 @@ public class Examples extends Application {
         return container;
     }
 
-    /**
-     * 2 Textfelder sollen nebeneinander angeordnet werden und den Vor- und Nachnamen aus BindingsTraining anzeigen.
-     * Eine Aenderung der Namen soll diese auch im Modell aendern. Sobald der Name "Bruce Wayne" eingetragen ist, soll
-     * in der Kopfzeile "I am batman" angezeigt werden (implementiert in {@link #initResultDisplay()}).
-     */
     private Node initNameBinding() {
         HBox container = new HBox();
         container.setSpacing(20.0);
@@ -115,18 +105,16 @@ public class Examples extends Application {
         TextField lastName = new TextField();
         lastName.textProperty().bindBidirectional(bindingsTraining.lastName);
 
+        Label fullNameLabel = new Label("Full Name: ");
+        fullNameLabel.textProperty().bindBidirectional(bindingsTraining.fullName);
+        
         Label heading = new Label("Uebung 3: ");
 
-        container.getChildren().addAll(heading, firstNameLabel, firstName, lastNameLabel, lastName);
+        container.getChildren().addAll(heading, firstNameLabel, firstName, lastNameLabel, lastName, fullNameLabel);
 
         return container;
     }
 
-    /**
-     * Zeigt ein Textfeld und 2 Listen an. Die erste Liste enthaelt alle Staedtenamen, die zweite die gefilterten
-     * Staedtenamen. Das Textfeld dient dazu den Filter zu bestimmen: die Eingabe bestimmt, mit welchen Buchstaben die
-     * Staedte der zweiten Liste anfangen sollen.
-     */
     private Node initCityBinding() {
         HBox container = new HBox();
         container.setSpacing(20.0);
