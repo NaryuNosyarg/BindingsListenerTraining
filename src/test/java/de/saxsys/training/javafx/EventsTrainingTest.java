@@ -17,7 +17,7 @@ public class EventsTrainingTest {
 	public void pythagorasTest() {
 		eventsTraining.bindingsTraining.a.set(3);
 		eventsTraining.bindingsTraining.b.set(4);
-		assertEquals("Hypothenuse: 5", eventsTraining.result);
+		assertEquals("Hypothenuse: 5", eventsTraining.result.get());
 	}
 
 	/**
@@ -27,26 +27,23 @@ public class EventsTrainingTest {
 	 */
 	@Test
 	public void listTest() {
-		eventsTraining.bindingsTraining.cityNames.add("Darmstadt");
-		assertEquals("add", eventsTraining.result);
-		eventsTraining.bindingsTraining.cityNames.remove(0);
-		assertEquals("remove", eventsTraining.result);
+		eventsTraining.bindingsTraining.cars.add(new Car("Opel", "Corsa", 50000));
+		assertEquals("add", eventsTraining.result.get());
+		eventsTraining.bindingsTraining.cars.remove(0);
+		assertEquals("remove", eventsTraining.result.get());
 	}
 
 	/**
 	 * Uebung 3
 	 * 
-	 * Implementieren Sie {@link EventsTraining#initBatmanListener()}
+	 * Implementieren Sie {@link EventsTraining#initCorsaListener()}
 	 */
 	@Test
-	public void batmanTest() {
-		eventsTraining.bindingsTraining.firstName.set("John");
-		eventsTraining.bindingsTraining.lastName.set("Snow");
-		assertEquals("I want to be batman.", eventsTraining.result);
-		eventsTraining.bindingsTraining.lastName.set("Wayne");
-		assertEquals("I want to be batman.", eventsTraining.result);
-		eventsTraining.bindingsTraining.firstName.set("Bruce");
-		assertEquals("I am batman.", eventsTraining.result);
+	public void corsaTest() {
+		eventsTraining.bindingsTraining.car.setModel("Corsa");;
+		assertEquals("Corsa rules!.", eventsTraining.result.get());
+		eventsTraining.bindingsTraining.car.setModel("Passat");
+		assertEquals("I want to drive a Corsa!", eventsTraining.result.get());
 	}
 
 }

@@ -15,8 +15,8 @@ public class EventsTraining {
     public EventsTraining(BindingsTraining bindingsTraining) {
         this.bindingsTraining = bindingsTraining;
         initPythagorasListener();
-        initListListener();
-        initBatmanListener();
+        initCarListListener();
+        initCorsaListener();
     }
 
 	/**
@@ -27,7 +27,6 @@ public class EventsTraining {
 	 * </p>
 	 */
 	private void initPythagorasListener() {
-
 	}
 
 	/**
@@ -37,26 +36,25 @@ public class EventsTraining {
 	 * Jedes mal wenn:
 	 * </p>
 	 * <ul>
-	 * <li>aus cityNames ein Element entfernt wird, soll <code>result.equals("remove")== true</code> gelten</li>
-	 * <li>in cityNames ein Element hinzugefuegt wird soll <code>result.equals("add") == true</code> gelten</li>
+	 * <li>aus cars ein Element entfernt wird, soll <code>result.equals("remove")== true</code> gelten</li>
+	 * <li>in cars ein Element hinzugefuegt wird soll <code>result.equals("add") == true</code> gelten</li>
 	 * </ul>
 	 */
-	private void initListListener() {
-
+	private void initCarListListener() {
 	}
 
 	/**
 	 * Uebung 3
 	 * 
 	 * <p>
-	 * Wenn der komplette Name "Bruce Wayne" lautet, dann soll
-	 * <code>result.equals("I am batman.") == true</code> gelten. In allen
+	 * Wenn das Modell "Corsa" ist, dann soll
+	 * <code>result.equals("Corsa rules!.") == true</code> gelten. In allen
 	 * anderen Faellen soll
-	 * <code>result.equals("I want to be batman.") == true</code> gelten.
+	 * <code>result.equals("I want to drive a Corsa!") == true</code> gelten.
 	 * </p>
 	 */
-	private void initBatmanListener() {
 
+	private void initCorsaListener() {
 	}
 
 }

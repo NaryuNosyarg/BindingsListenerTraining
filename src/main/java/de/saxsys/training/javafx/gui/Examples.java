@@ -4,8 +4,6 @@ package de.saxsys.training.javafx.gui;
  * Created by michael.thiele on 29.04.2014.
  */
 
-import de.saxsys.training.javafx.BindingsTraining;
-import de.saxsys.training.javafx.EventsTraining;
 import javafx.application.Application;
 import javafx.beans.binding.Bindings;
 import javafx.geometry.Insets;
@@ -18,7 +16,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import javafx.util.converter.NumberStringConverter;
+import de.saxsys.training.javafx.BindingsTraining;
+import de.saxsys.training.javafx.EventsTraining;
 
 public class Examples extends Application {
 

@@ -3,3 +3,7 @@
 .idea/tasks.xml
 !.project
 !.classpath
+.idea/libraries/Maven__junit_junit_4_10.xml
+.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml
+.settings/org.eclipse.jdt.core.prefs
+.settings/org.eclipse.m2e.core.prefs
