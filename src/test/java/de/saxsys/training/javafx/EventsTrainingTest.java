@@ -17,7 +17,7 @@ public class EventsTrainingTest {
 	public void pythagorasTest() {
 		eventsTraining.bindingsTraining.a.set(3);
 		eventsTraining.bindingsTraining.b.set(4);
-		assertEquals("Hypothenuse: 5", eventsTraining.result.get());
+		assertEquals("Hypothenuse: 5.0", eventsTraining.result.get());
 	}
 
 	/**
@@ -41,7 +41,7 @@ public class EventsTrainingTest {
 	@Test
 	public void corsaTest() {
 		eventsTraining.bindingsTraining.car.setModel("Corsa");;
-		assertEquals("Corsa rules!.", eventsTraining.result.get());
+		assertEquals("Corsa rules!", eventsTraining.result.get());
 		eventsTraining.bindingsTraining.car.setModel("Passat");
 		assertEquals("I want to drive a Corsa!", eventsTraining.result.get());
 	}

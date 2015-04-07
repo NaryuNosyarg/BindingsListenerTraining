@@ -3,6 +3,7 @@ package de.saxsys.training.javafx;
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.scene.paint.Color;
+
 import org.junit.Test;
 
 import static org.junit.Assert.*;
